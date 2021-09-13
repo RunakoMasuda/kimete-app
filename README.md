@@ -117,4 +117,53 @@
 ## 実装した機能についての画像やGIFおよびその説明
 ## 実装予定の機能
 ## データベース設計
+### users テーブル
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false |
+| password           | string | null: false |
+| name               | string | null: false |
+| birthday           | date   | null: false |
+| editsign           | integer| null: false |
+#### Association
+- has_many :customizes
+- has_many :jankens
+
+### customizes テーブル
+| Column             | Type       | Options                         |
+| ------------------ | ------     | -----------                     |
+| theme              | string     |  null: false                    |
+| user               | references |  null: false, foreign_key: true |
+#### Association
+- belongs_to :users
+- has_many :details
+
+### details テーブル
+| Column             | Type       | Options                        |
+| ------------------ | ------     | -----------                    |
+| theme              | references | null: false, foreign_key: true |
+| detail             | text       |  null: false                   |
+#### Association
+- belongs_to :customizes
+
+### jankens テーブル
+| Column             | Type       | Options                         |
+| ------------------ | ------     | -----------                     |
+| win                | integer    | null: false                     |
+| user               | references |  null: false, foreign_key: true |
+#### Association
+- belongs_to :users
+
+### hiraganas テーブル
+| Column             | Type       | Options                        |
+| ------------------ | ------     | -----------                    |
+| hiragana           | string     | null: false                    |
+| comment            | text       |                                |
+
+### messages テーブル
+|Column              | Type       | Options                        |
+| ------------------ | ------     | -----------                    |
+| message1           | text       | null: false                    |
+| message2           | text       |                                |
+
 ## ローカルでの実装方法
