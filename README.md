@@ -141,7 +141,7 @@
 ### details テーブル
 | Column             | Type       | Options                        |
 | ------------------ | ------     | -----------                    |
-| theme              | references | null: false, foreign_key: true |
+| customize              | references | null: false, foreign_key: true |
 | detail             | text       |  null: false                   |
 #### Association
 - belongs_to :customizes
