@@ -39,11 +39,11 @@ a {
 .header{
   background-color: #f1f8fe;
   margin-bottom: 48px;
-  padding: 20px 0;
+  padding: 24px 0;
 }
 
 .inner{
-  width: 1300px;
+  width: 1360px;
   margin: 0 auto;
 }
 
@@ -75,7 +75,7 @@ a {
 /* フッター */
 .footer {
   background-color: gray;
-  padding: 10px 0;
+  padding: 8px 0;
   bottom: 0; /*下に固定*/
 }
 .copyright {
@@ -86,13 +86,13 @@ a {
 
 /* トップページ */
 .head_inner{
-  width: 1300px;
+  width: 1360px;
   margin: 0 auto;
-  height: 250px;
+  height: 248px;
 }
 
 .select_btn{
-  height: 300px;
+  height: 320px;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -103,7 +103,7 @@ a {
   border: 1px solid black;
   font-size: 50px;
   text-align: center;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .jyanken_btn{
@@ -111,7 +111,7 @@ a {
   border: 1px solid black;
   font-size: 50px;
   text-align: center;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .suuji_btn{
@@ -119,7 +119,7 @@ a {
   border: 1px solid black;
   font-size: 50px;
   text-align: center;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .hiragana_btn{
@@ -127,7 +127,7 @@ a {
   border: 1px solid black;
   font-size: 50px;
   text-align: center;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .customize{
@@ -135,7 +135,7 @@ a {
 }
 .customaize_inner{
   display: flex;
-  height: 300px;
+  height: 324px;
   justify-content: center;
 }
 
@@ -144,6 +144,50 @@ a {
   border: 1px solid black;
   font-size: 50px;
   text-align: center;
-  padding: 50px 0;
-  margin: 50px 0 ;
+  padding: 48px 0;
+  margin: 48px 0 ;
+}
+
+/* カスタマイズ登録ページ */
+.customize_input{
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.customize_title_label{
+  font-size: 48px;
+}
+
+.customize_title{
+  width: 48vh;
+  margin-left: 24px;
+  font-size: 48px;
+
+}
+
+.customize_detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.customize_detail_in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.customize_detail_label{
+  
+}
+
+.customize_detail_text{
+  width: 40vw;
+  height: 48px;
+  margin-left: 24px;
+}
+
+.customize-submit{
+  margin-bottom: 40px;
 }
