@@ -43,7 +43,7 @@ a {
 }
 
 .inner{
-  width: 1024px;
+  width: 1300px;
   margin: 0 auto;
 }
 
@@ -74,11 +74,76 @@ a {
 
 /* フッター */
 .footer {
-  background-color: #999;
+  background-color: gray;
   padding: 10px 0;
+  bottom: 0; /*下に固定*/
 }
 .copyright {
   text-align: center;
   color: #fff;
   font-size: 10px;
+}
+
+/* トップページ */
+.head_inner{
+  width: 1300px;
+  margin: 0 auto;
+  height: 250px;
+}
+
+.select_btn{
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.yes_no_btn{
+  width: 20%;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.jyanken_btn{
+  width: 20%;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.suuji_btn{
+  width: 20%;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hiragana_btn{
+  width: 20%;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.customize{
+
+}
+.customaize_inner{
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+
+.customize_btn{
+  width: 40%;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  padding: 50px 0;
+  margin: 50px 0 ;
 }

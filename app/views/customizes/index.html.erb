@@ -1,3 +1,28 @@
-<div class="wrapper">
-  <%= render "footer" %>
-</div>
+<main class="main">
+  <div class ="upper">
+    <div class="upper_text">
+  <%# ログインしているときは以下を表示する %>
+    <%# <% if user_signed_in? %> 
+      <%# <div class="greeting"> %>
+         <%# こんにちは、 %>
+        <%# <%= link_to current_user.name, user_path(current_user.id), class: :greeting__link%>
+      <%# </div> %>
+    <%# <% end %> 
+    <%# // ログインしているときは上記を表示する %>
+    </div>
+    <div class="select_btn">
+      <%=link_to "YES/NO" , root_path, class: :yes_no_btn %>
+      <%=link_to "じゃんけん" , root_path, class: :jyanken_btn %>
+      <%=link_to "数字" , root_path, class: :suuji_btn %> 
+      <%=link_to "ひらがな" , root_path, class: :hiragana_btn %>
+    </div>
+  </div>
+    <div class = customaize>
+      <div class="customaize_inner">
+        <%=link_to "カスタマイズ" , root_path, class: :customize_btn%>
+      </div>
+    </div> 
+      
+    </div>
+  
+</main>
