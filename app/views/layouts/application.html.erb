@@ -10,34 +10,29 @@
   </head>
 
   <body>
-
     <header class="header">
       <div class="inner">
-        <div class="nav">
-          <div class="nav_left">
-          </div>
-          <div class="nav_right">
-            <%= link_to "ログイン", user_session_path, class: :head_btn %>
-            <%= link_to "新規登録", new_user_registration_path, class: :head_btn %> 
-          </div>
-        </div>
+        <%# ログインしているときは以下を表示するようにしましょう %>
+          <% if user_signed_in? %>
+            <div class="nav">
+              <div class="nav_left">
+              </div>
+              <div class="nav_right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :head_btn %>
+                <%# <%= link_to "変更", edit_user_registration_path, class: :head_btn %>  
+              </div>
+            </div>
+          <% else %> 
+            <div class="nav">
+              <div class="nav_left">
+              </div>
+              <div class="nav_right">
+                <%= link_to "ログイン", user_session_path, class: :head_btn %>
+                <%= link_to "新規登録", new_user_registration_path, class: :head_btn %> 
+              </div>
+            </div>
+          <% end %>
       </div> 
-
-    <%# ログインしているときは以下を表示するようにしましょう %>
-      <%# <% if user_signed_in? %>
-       <%# <div class="head_right"> %>
-         <%# <%= link_to "ログアウト", root_path, method: :delete, class: :head_logout %>
-         <%# <%= link_to "New Proto", root_path, class: :head_btn %> 
-            <%# </div> %>
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <%# <% else %> 
-          <%# ログインしていないときは以下を表示するようにしましょう %>
-            <%# <div class="head_right"> %>
-              <%# <%= link_to "ログイン", root_path, class: :head_btn %> 
-              <%# <%= link_to "新規登録", root_path, class: :head_btn %> 
-            <%# </div> %>
-          <%# <% end %> 
-          <%# // ログインしていないときは上記を表示するようにしましょう %>
     </header>
     <%= yield %>
     <footer class = "footer">
