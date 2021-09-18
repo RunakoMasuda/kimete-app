@@ -1,46 +1,22 @@
 <main class = customize_new>
+  <%= form_with model:@customize, local: true do |f|%>
   <div class="customize_input">
-    <div class="customize_title_label">
-      <%= label :text, "タイトル" %><br />
-    </div>
-    <input class="customize_title" placeholder= "type a message">
+      <%= f.label :theme, "タイトル" %><br />
+      <%= f.text_field :theme, clas: :customize_theme, id:"customize_theme" %>
   </div>
+  <%= f.fields_for :details do |d|%>
   <div class="customize_detail">
     <div class="customize_detail_in">
-      <div class="customize_detail_label">
-        <%= label :text, "①" %><br />
-      </div>
-      <input class="customize_detail_text" placeholder= "1">
-    </div>
-    <div class="customize_detail_in">
-      <div class="customize_detail_label">
-        <%= label :text, "②" %><br />
-      </div>
-      <input class="customize_detail_text" placeholder= "2">
-    </div>
-    <div class="customize_detail_in">
-      <div class="customize_detail_label">
-        <%= label :text, "③" %><br />
-      </div>
-      <input class="customize_detail_text" placeholder= "3">
-    </div>
-    <div class="customize_detail_in">
-      <div class="customize_detail_label">
-        <%= label :text, "④" %><br />
-      </div>
-      <input class="customize_detail_text" placeholder= "4">
-    </div>
-    <div class="customize_detail_in">
-      <div class="customize_detail_label">
-        <%= label :text, "⑤" %><br />
-      </div>
-      <input class="customize_detail_text" placeholder= "5">
-    </div>
-  </div>
-  <div class=customize_submit>
-    <input class="customize_submit_btn" type="submit" value="登録">
-  </div>
+       <%= d.label :detail %><br />
+       <%= d.text_area :detail, class: :customize_detail_text,id:"detail_text"%>
     </div>
   </div>
   
+  </div>
+</div>
+  <% end %>
+  <div class = customize_submit>
+    <%= f.submit "登録", class: :customize_submit_btn  %>
+  </div>
+<% end %>
 </main>

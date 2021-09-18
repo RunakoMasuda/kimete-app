@@ -5,7 +5,7 @@
       <h5>新規アカウントの作成</h5>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+      <%= form_with model: @user, as: user_registration_path, url: registration_path(resource_name), local: true do |f|%>
         <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
@@ -29,7 +29,7 @@
             <%= f.label :birthday%>
           </div>
           <div class='field-input'>
-            <%= f.birthday_field :birthday%>
+            <%= f.date_field :birthday%>
           </div>
         </div>
         <%# birthdayの仮データ %>
