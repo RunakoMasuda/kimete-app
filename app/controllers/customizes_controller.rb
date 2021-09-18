@@ -35,7 +35,7 @@ class CustomizesController < ApplicationController
     #binding.pry
     details = []
     details = Detail.where(customize_id: params[:id]).pluck(:detail)
-    binding.pry
+    #binding.pry
     @detail = details.sample(1)
   end
 

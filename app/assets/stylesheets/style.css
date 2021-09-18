@@ -78,10 +78,34 @@ a {
   padding: 8px 0;
   bottom: 0; /*下に固定*/
 }
+
 .copyright {
   text-align: center;
   color: #fff;
   font-size: 10px;
+}
+/* フッターボタン*/
+.nav_foot{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_btn{
+  background-color: #f1f8fe;
+  padding: 24px 0;
+}
+
+.foot_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
 }
 
 /* トップページ */
