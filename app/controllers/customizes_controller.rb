@@ -21,6 +21,7 @@ class CustomizesController < ApplicationController
 
   def show
     @customize = Customize.find(params[:id])
+    get_detail
   end
   
   private
@@ -28,6 +29,14 @@ class CustomizesController < ApplicationController
   def customize_params
     #binding.pry
     params.require(:customize).permit(:theme,details_attributes:[:detail]).merge(user_id: current_user.id)
+  end
+
+  def get_detail
+    #binding.pry
+    details = []
+    details = Detail.where(customize_id: params[:id]).pluck(:detail)
+    binding.pry
+    @detail = details.sample(1)
   end
 
 end

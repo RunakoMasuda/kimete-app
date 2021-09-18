@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  #get 'customizes/index'
   root to: "customizes#index"
-  resources :customizes, only: [:new, :create] do
+  resources :customizes, only: [:new, :create, :show] do
     resources :details, only: [:new, :create]
   end
 
