@@ -202,3 +202,18 @@ a {
   margin: 32px 0 ;
   
 }
+
+/*カスタマイズ登録完了画面*/
+.select_customizes{
+  display: flex;
+  justify-content: center;
+}
+
+.select_customizes_btn{
+  width: 144px;
+  border: 1px solid black;
+  font-size: 32px;
+  text-align: center;
+  padding: 16px ;
+  margin: 32px 0 ;
+}
