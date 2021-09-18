@@ -2,12 +2,12 @@
   <%= form_with model:@customize, local: true do |f|%>
   <div class="customize_input">
       <%= f.label :theme, "タイトル" %><br />
-      <%= f.text_field :theme, clas: :customize_theme, id:"customize_theme" %>
+      <%= f.text_field :theme, class: :customize_theme, id:"customize_theme" %>
   </div>
   <%= f.fields_for :details do |d|%>
   <div class="customize_detail">
     <div class="customize_detail_in">
-       <%= d.label :detail %><br />
+       <%# <%= d.label :detail, "" %><br /> 
        <%= d.text_area :detail, class: :customize_detail_text,id:"detail_text"%>
     </div>
   </div>
