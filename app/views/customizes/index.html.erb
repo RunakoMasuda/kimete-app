@@ -1,3 +1,6 @@
+<html>
+<head>
+</head>
 <main class="main">
   <div class ="upper">
     <div class="upper_text">
@@ -10,11 +13,23 @@
       <% end %> 
     <%# // ログインしているときは上記を表示する %>
     </div>
-    <div class="select_btn">
-      <%=link_to "YES/NO" , root_path, class: :yes_no_btn %>
-      <%=link_to "じゃんけん" , root_path, class: :jyanken_btn %>
-      <%=link_to "数字" , root_path, class: :suuji_btn %> 
-      <%=link_to "ひらがな" , root_path, class: :hiragana_btn %>
+    <div class = select_btn>
+    <div class = "yes_no_btn">
+     <button id="yes_no_btn" >YES/NO</button>
+    </div>
+    <div class = "jyanken_btn">
+     <button id="jyanken_btn" >じゃんけん</button>
+    </div>
+    <div class = "suuji_btn">
+     <button id="suuji_btn" >数字</button>
+    </div>
+    <div class = "hiragana_btn">
+     <button id="hiragana_btn" >ひらがな</button>
+    </div>
+      <%# <%=link_to "YES/NO" , yesno_index_path, class: :yes_no_btn, id: "yes_no_btn" %> 
+      <%# <%=link_to "じゃんけん" , root_path, class: :jyanken_btn %> 
+      <%# <%=link_to "数字" , root_path, class: :c %>  
+      <%# <%=link_to "ひらがな" , root_path, class: :hiragana_btn %> 
     </div>
   </div>
     <div class = customaize>
@@ -29,3 +44,4 @@
     </div>
   
 </main>
+</html>
