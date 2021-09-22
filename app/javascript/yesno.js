@@ -8,7 +8,7 @@ function yesno (){
       let img = new Image();
       const imageNo = Math.floor(Math.random() * imagelist .length);
       img.src = imagelist[imageNo];
-      console.log(img.src);
+      //console.log(img.src);
       document.write("<img src =" + img.src + ">");
  });
 };
